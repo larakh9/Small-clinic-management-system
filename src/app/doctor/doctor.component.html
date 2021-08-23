@@ -1,0 +1,40 @@
+
+<!-- <p  [appHighlight]="'gray'">Attribute Directive</p>
+<p  *appHidden="showDirective">Structural Directive</p>
+<p >{{message | shorten:5}}</p>
+
+<p >{{currentDate | date:'fullDate'}}</p>
+<hr/>
+<br/> -->
+
+<br/>
+<div class="row">
+    <p class="alert-danger">{{error}}</p>
+    <div class="col col-12" *ngIf=isLoading>
+        <span>Loading...</span>
+    </div>
+    <div class="col col-12">
+        <button class="btn btn-primary btn-sm" (click)="onAddDoctor()">Add Doctor</button>
+        
+    
+    </div>
+
+    <br/><br/>
+    <div class="col col-2 ">
+        <!-- <app-doctor-header (doctorAdded)="addDoctor($event)"></app-doctor-header>
+
+        <br/> -->
+
+        <app-doctor-item *ngFor="let item of doctor" [doctorItem]="item">
+            <!-- <p>This is inside component</p> -->
+        </app-doctor-item>
+
+    </div>
+    <div class="col col-9 offset-1">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div class="col col-2"><button class="btn btn-danger btn-sm" (click)="onClearDoctor()">Clear</button></div>
+    
+</div>
+

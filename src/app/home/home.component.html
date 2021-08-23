@@ -1,0 +1,51 @@
+<br/>
+<!-- <button class="btn btn-primary btn-sm" (click)="onStop()">Stop</button> -->
+
+<button class="btn btn-primary btn-sm" (click)="onLoadPatients()">Load Patients</button>
+<button class="btn btn-primary btn-sm" (click)="onLoadDoctors()">Load Doctors</button>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-align-justify">
+
+                </i> List of Appointments </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Doctor Name</th>
+                                <th>Appointment Date</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lara Khaled</td>
+                                <td>Dana Hussein</td>
+                                <td>22/08/2021</td>
+                                <td>This is a test using HTML</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a href="#" class="page-link">Prev</a>
+                        </li>
+                        <li class="page-item active">
+                            <a href="#" class="page-link">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link">Next</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary btn-sm" (click)="onAddAppointment()">Add a new appointment</button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col col-12">
+        <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="PatientName">Patient Name</label>
+                <input type="text" class="form-control" formControlName="patientName" >
+                <span *ngIf="!createForm.get('patientName')?.valid && createForm.get('patientName')?.touched" class="alert-danger">Patient Name is required</span>
+            </div>
+            <div class="form-group">
+                <label for="DoctorName">Doctor Name</label>
+                <input type="text" class="form-control" formControlName="doctorName" >
+                <span *ngIf="!createForm.get('doctorName')?.valid && createForm.get('doctorName')?.touched" class="alert-danger">Doctor Name is required</span>
+            </div>
+            
+
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" class="form-control" formControlName="date" >
+            </div>
+
+            <br/>
+            <button class="btn btn-primary btn-sm" type="submit" [disabled]="!createForm.valid">Submit</button>
+        </form>
+        
+    </div>
+</div>

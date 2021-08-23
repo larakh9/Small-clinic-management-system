@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col col-2">
+        <label>First Name</label>
+    </div>
+    <div class="col col-10">
+        <p>{{doctor.firstName}}</p>
+    </div>
+
+    <div class="col col-2">
+        <label>Last Name</label>
+    </div>
+    <div class="col col-10">
+        <p>{{doctor.lastName}}</p>
+    </div>
+
+    <div class="col col-2">
+        <label>Age</label>
+    </div>
+    <div class="col col-10">
+        <p>{{doctor.age}}</p>
+    </div>
+    <div class="col col-2">
+        <label>Gender</label>
+    </div>
+    <div class="col col-10">
+        <p>{{doctor.gender}}</p>
+    </div>
+    <div class="col col-2">
+        <label>Email</label>
+    </div>
+    <div class="col col-10">
+        <p>{{doctor.email}}</p>
+    </div>
+</div>
+
+<!-- <a class="btn btn-primary bt-sm" [routerLink]="['/doctor', doctor.id,'edit']">Edit</a> -->
+
+<a class="btn btn-primary bt-sm" (click)="onEdit(doctor.id)">Edit</a>
+<br/>
+<br/>

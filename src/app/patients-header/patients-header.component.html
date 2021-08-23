@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-6">
+<div class="row">
+    <div class="col-4">
+        <input type="text" placeholder="firstName" class="form-control" #firstName/> 
+    </div>
+        
+    <div class="col-4">
+        <input type="text" placeholder="lastName" class="form-control" #lastName/> 
+    </div>
+    <div class="col-4">
+        <input type="text" placeholder="age" class="form-control" #age/> 
+    </div>
+</div>
+
+    </div>
+
+    <div class="col-6">
+        
+<button class="btn btn-primary btn-sm" (click)="addPatient(firstName, lastName,age)">Add Patient</button>
+    </div>
+</div>

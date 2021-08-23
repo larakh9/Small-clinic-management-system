@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col col-12">
+        <form (ngSubmit)="onSubmit(editForm)" #editForm="ngForm" >
+            <input type="hidden" [ngModel]="patient.id" name="id">
+            <input type="hidden" [ngModel]="patient.key" name="key">
+            <!-- <div ngModelGroup="fullName"> -->
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" #firstName="ngModel" [ngModel]="patient.firstName" id="firstName" name="firstName" required>
+                    <span *ngIf="!firstName.valid && firstName.touched" class="alert-danger">First Name is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" #lastName="ngModel" [ngModel]="patient.lastName" id="lastName"  name="lastName" required>
+                    <span *ngIf="!lastName.valid && lastName.touched" class="alert-danger">Last Name is required</span>
+                </div>
+        <!-- </div> -->
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" [ngModel]="patient.age" id="age" name="age" number>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" #email="ngModel" [ngModel]="patient.email" id="email" name="email" email required>
+                <span *ngIf="!email.valid && email.touched" class="alert-danger">Email is required</span>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" [ngModel]="patient.gender" name="gender">
+                    <option *ngFor="let item of genders">{{item}}</option>
+                </select>
+            </div>
+<br/>
+
+            <button class="btn btn-primary btn-sm" type="submit" [disabled]="!editForm.valid">Submit</button>
+        </form>
+    </div>
+</div>
